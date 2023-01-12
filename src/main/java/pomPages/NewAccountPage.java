@@ -1,0 +1,21 @@
+package pomPages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class NewAccountPage {
+	
+	@FindBy(xpath="//input[@value='New Account']")
+	private WebElement nwacntbtn;
+	
+	public NewAccountPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void NewAccountLink() {
+		nwacntbtn.click();
+	}
+
+}
